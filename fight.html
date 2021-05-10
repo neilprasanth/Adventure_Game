@@ -1,0 +1,82 @@
+
+
+<!-- CHANGE THE SCRIPT SO IT USES A TExT BOX TO FINALIZE YOUR DECISION-->
+
+<html>
+  <head>
+    <link rel = "stylesheet" href = "JapaneseStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <script>
+      //function katanapath()
+      //{
+        //window.location.href = "katana.html";
+      //}
+      //function bowpath()
+      //{
+      //window.location.href = "bow.html";
+      //}
+      function actionOne()
+      {
+        document.getElementById("answer").style.visibility = "visible";
+        //document.getElementById("button").sytle.visibility = "visible";
+      }
+      function actionTwo()
+      {
+        document.getElementById("answer2").style.visibility = "visible";
+        //document.getElementById("button2").sytle.visibility = "visible";
+      }
+      function hide()
+      {
+        document.getElementById("answer").style.visibility = "hidden";
+        //document.getElementById("button").style.visibility = "hidden";
+
+        document.getElementById("answer2").style.visibility = "hidden";
+        //document.getElementById("button2").style.visibility = "hidden";
+      }
+      function checkAnswer()
+      {
+        var x = document.getElementById("answer").value;
+        if(x == "yes")
+        {
+            window.location.href = "katana.html";
+        }
+        else{
+          window.location.href = "fight.html"
+        }
+      }
+      function checkAnswer2()
+      {
+        var x = document.getElementById("answer2").value;
+        if(x == "yes")
+        {
+          window.location.href = "bow.html"
+        }
+        else {
+          window.location.href = "fight.html"
+        }
+      }
+
+    </script>
+  </head>
+
+  <body onload = "hide()">
+    <center><h1>The War</h1>
+    <p>You unsheath your katana and defend your homeland. With every swing of your sword a Mongol falls.</p>
+    <p>Drawing your bow you quickly dispatch off another 3 mongol archers standing affar.</p>
+    <p>As your eyes scan the beach you gaze upon a man with armor of royalty and a massive body to match.</p>
+    <p>This Mongolian Khan will be your next competitor. How will you fight this force of nature?</p>
+    <hr>
+    <p>Click an image and type in "yes" or "no" into the textbox to confirm your choice</p>
+  <table>
+    <td><img src = "samuraiKatana.jpg" width = "500px" height "500px" onclick = "actionOne()"></td>
+    <td><img src = "samuraiBow.jpg" width = "500px" height "500px" onclick = "actionTwo()"></td>
+  </table>
+    <input type = "text" id = "answer">
+    <input type = "button" value = "Advance" onclick = "checkAnswer()" id = "button">
+    <input type = "text" id = "answer2">
+    <input type = "button" value = "Advance" onclick = "checkAnswer2()" id = "button2">
+    </center>
+    <br><br><br>
+  </body>
+<html>

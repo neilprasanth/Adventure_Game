@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link rel = "stylesheet" href = "JapaneseStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <script>
+      function saveName()
+      {
+        var x = document.getElementById("name").value;
+        window.localStorage.setItem('userName', x);
+      }
+      function pageTwo()
+      {
+        window.location.href = "Beginning.html";
+      }
+    </script>
+  </head>
+
+  <body>
+  <center>
+    <h1> Welcome to The Fate of the Warrior </h1>
+    <p> This text adventure will test your ability to survive in even the most daunting situations.</p> <hr>
+<br><br><br><br>
+  <p>Type your name here and take the first step into The Fate of the Warrior</p>
+
+  <input type = "text" id = "name">
+
+  <input type = "button" value = "Save Name" onclick = "saveName()" id = "button">
+  <input type = "button" value = "Start" onclick = "pageTwo()" id = "button">
+
+  </body>
+  </center>
+</html>

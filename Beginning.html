@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel = "stylesheet" href = "JapaneseStyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <script>
+      function getName()
+
+      {
+        var x = window.localStorage.getItem('userName');
+        document.getElementById("welcome").innerHTML = x;
+      }
+      function fight()
+      {
+        window.location.href = "fight.html";
+      }
+      function run()
+      {
+        window.location.href = "run.html";
+      }
+
+      function hidButton()
+      {
+        document.getElementById("welcome").innerHTML = " ";
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <center><h1>The Birth of a Legend</h1>
+    <p id = "welcome"></p>
+    <p id = subScript>Click the button to see your name above</p>
+
+    <input type = "button" value = "See Name" onclick = "getName()" id = "button">
+    <input type = "button" value = "Hide Name" onclick = "hidButton()" id = "button">
+
+    <hr><br><br><br>
+    <p>Our story begins with you. A warrior. The pride of your family.
+    Now it is up to you to choose your destiny.</p>
+    <p>Your first trial starts with the envasion of the Mongol Empire. As a commanding Samurai of the Japanese Army what will you do?</p>
+
+    <input type = "button" value = "Fight!" onclick = "fight()" id = "button">
+    <input type = "button" value = "Run!" onclick = "run()" id = "button">
+
+  </center>
+  </body>
+</html>
